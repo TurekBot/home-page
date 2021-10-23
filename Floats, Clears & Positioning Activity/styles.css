@@ -6,6 +6,54 @@ fixed
 sticky
 z-index */
 
+:root {
+    /* Color Palette from Coolors.co: https://coolors.co/474a2c-636940-59a96a-9bdeac-b4e7ce */
+    --rifle-green: hsla(66, 25%, 23%, 1);
+    --dark-olive-green: hsla(69, 24%, 33%, 1);
+    --forest-green-crayola: hsla(133, 32%, 51%, 1);
+    --celadon: hsla(135, 50%, 74%, 1);
+    --magic-mint: hsla(151, 52%, 81%, 1);
+}
+
+html {
+    min-height: 100%;
+}
+
 body {
-    background: linear-gradient(crimson, skyblue);
+    background: linear-gradient(
+        39deg,    
+        var(--magic-mint) 10%,
+        var(--celadon),
+        var(--forest-green-crayola),
+        var(--dark-olive-green),
+        var(--rifle-green)
+        ) no-repeat;
+}
+
+a:link {
+    color: var(--forest-green-crayola);
+}
+
+a:visited {
+    color: var(--rifle-green);
+}
+
+#bird {
+    float: right;
+    margin: 10px;
+}
+
+section {
+}
+
+section:nth-of-type(1) {
+    background: var(--magic-mint);
+}
+section:nth-of-type(2) {
+    background: var(--forest-green-crayola);
+    clear: both;
+}
+section:nth-of-type(3) {
+    background: var(--rifle-green);
+    color: white
 }
