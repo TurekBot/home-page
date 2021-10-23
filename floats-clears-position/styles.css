@@ -1,67 +1,95 @@
 /* 
 ✅float
 ✅clear
-relative
-absolute
-fixed
+✅relative
+✅absolute
+✅fixed
 ✅sticky
-z-index */
+✅z-index */
 
 :root {
-    /* Color Palette from Coolors.co: https://coolors.co/474a2c-636940-59a96a-9bdeac-b4e7ce */
-    --rifle-green: hsla(66, 25%, 23%, 1);
-    --dark-olive-green: hsla(69, 24%, 33%, 1);
-    --forest-green-crayola: hsla(133, 32%, 51%, 1);
-    --celadon: hsla(135, 50%, 74%, 1);
-    --magic-mint: hsla(151, 52%, 81%, 1);
+  /* Color Palette from Coolors.co: https://coolors.co/474a2c-636940-59a96a-9bdeac-b4e7ce */
+  --rifle-green: hsla(66, 25%, 23%, 1);
+  --dark-olive-green: hsla(69, 24%, 33%, 1);
+  --forest-green-crayola: hsla(133, 32%, 51%, 1);
+  --celadon: hsla(135, 50%, 74%, 1);
+  --magic-mint: hsla(151, 52%, 81%, 1);
 }
 
 html {
-    min-height: 100%;
-    font-family: sans-serif;
+  min-height: 100%;
+  font-family: sans-serif;
 }
 
 header {
-    /* Necesssary to get the nav to be sticky. This is because it's "offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor)"*/
-    display: inline; 
+  /* Necesssary to get the nav to be sticky. This is because it's "offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor)"*/
+  display: inline;
 }
 
 nav {
-    display: inline-block;
-    background: hsla(69, 24%, 33%, 0.5);
-    position: sticky;
-    top: 10px;
-    padding-right: 10px;
+  display: inline-block;
+  background: hsla(69, 24%, 33%, 0.5);
+  position: sticky;
+  top: 10px;
+  padding-right: 10px;
+  margin-bottom: 30px;
 }
 
 body {
+  margin: 0 auto;
+  width: 400px;
 }
 
 a:link {
-    color: var(--forest-green-crayola);
+  color: var(--forest-green-crayola);
 }
 
 a:visited {
-    color: var(--rifle-green);
+  color: var(--rifle-green);
 }
 
 #bird {
-    float: right;
-    margin-left: 10px;
-    margin-bottom: 10px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#another-birb {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#another-birb > figcaption {
+  text-align: center;
 }
 
 section {
+  padding: 10px;
+  margin-bottom: 100px;
 }
 
 section:nth-of-type(1) {
-    background: var(--magic-mint);
+  background: var(--magic-mint);
 }
 section:nth-of-type(2) {
-    background: var(--forest-green-crayola);
-    clear: right;
+  background: var(--forest-green-crayola);
+  clear: right;
+  z-index: -3;
 }
 section:nth-of-type(3) {
-    background: var(--rifle-green);
-    color: white
+  background: var(--rifle-green);
+  color: white;
+}
+
+aside {
+  z-index: -1;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+}
+
+#copyright {
+  position: relative;
+  left: -200px;
+  bottom: 30px;
 }
