@@ -1,7 +1,11 @@
-float
+/* float
 clear
 relative
 absolute
 fixed
 sticky
-z-index
+z-index */
+
+body {
+    background: linear-gradient(crimson, skyblue);
+}
