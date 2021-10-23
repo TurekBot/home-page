@@ -1,9 +1,10 @@
-/* float
-clear
+/* 
+✅float
+✅clear
 relative
 absolute
 fixed
-sticky
+✅sticky
 z-index */
 
 :root {
@@ -17,17 +18,23 @@ z-index */
 
 html {
     min-height: 100%;
+    font-family: sans-serif;
+}
+
+header {
+    /* Necesssary to get the nav to be sticky. This is because it's "offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor)"*/
+    display: inline; 
+}
+
+nav {
+    display: inline-block;
+    background: hsla(69, 24%, 33%, 0.5);
+    position: sticky;
+    top: 10px;
+    padding-right: 10px;
 }
 
 body {
-    background: linear-gradient(
-        39deg,    
-        var(--magic-mint) 10%,
-        var(--celadon),
-        var(--forest-green-crayola),
-        var(--dark-olive-green),
-        var(--rifle-green)
-        ) no-repeat;
 }
 
 a:link {
@@ -40,7 +47,8 @@ a:visited {
 
 #bird {
     float: right;
-    margin: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 section {
@@ -51,7 +59,7 @@ section:nth-of-type(1) {
 }
 section:nth-of-type(2) {
     background: var(--forest-green-crayola);
-    clear: both;
+    clear: right;
 }
 section:nth-of-type(3) {
     background: var(--rifle-green);
