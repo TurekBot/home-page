@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Goodbye Crewel World";
+    src: url(fonts/Goodbye-crewel-world.otf);
+  }
+
+/* Hides the scrollbar */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+/* ----------------- */
+
+body {
+  background: #111;
+}
+
+h1 {
+    font-family: 'Goodbye Crewel World', cursive;
+    font-size: 52pt;
+}
+
+#the-viewport {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 768px;
+  border: 1px dashed red;
+}
+
+.diagonal-scroll-wrapper {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 1400px;
+  max-height: 1655px;
+  height: 1000px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform-origin: left top;
+  transform: rotate(-30deg) translate(-384px, 0px);
+  padding-left: 275px;
+  padding-top: 350px;
+  background: rgba(255, 0, 255, 0.4);
+}
+
+.diagonal-scroll-wrapper > * {
+  transform-origin: center;
+  transform: rotate(30deg);
+}
+.diagonal-scroll-wrapper .frame {
+  box-sizing: border-box; /* Makes sizing more intuitive by accounting for border. */
+  display: inline-block;
+  background-color: whitesmoke;
+  padding: 20px;
+  border: 10px solid black;
+  box-shadow: 10px 10px 40px rgba(0,0,0,0.4);
+  box-shadow: inset 2px 0px 10px black;
+}
+
+.frame img {
+    box-shadow: inset 0 0 10px black;
+}
+
+frame.four-by-three {
+  aspect-ratio: 4/3;
+  width: 400px;
+  height: 300px;
+}
+
+frame.three-by-four {
+  aspect-ratio: 3/4;
+  width: 300px;
+  height: 400px;
+}
+
+frame.two-by-three {
+    aspect-ratio: 2/3;
+    width: 200px;
+    height: 300px;
+  }
