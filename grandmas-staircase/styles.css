@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Goodbye Crewel World";
-    src: url(fonts/Goodbye-crewel-world.otf);
+    src: url(fonts/goodbye-crewel-world.woff2);
   }
 
 /* Hides the scrollbar */
@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    font-family: 'Goodbye Crewel World', cursive;
+    font-family: 'Goodbye Crewel World';
     font-size: 52pt;
 }
 
