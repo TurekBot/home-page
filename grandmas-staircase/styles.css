@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Goodbye Crewel World";
-  src: url(fonts/goodbye-crewel-world.woff2);
-}
-
 /* Hides the scrollbar */
 ::-webkit-scrollbar {
   width: 1px;
@@ -60,8 +55,7 @@ h1 {
   background-color: whitesmoke;
   padding: 20px;
   border: 10px solid black;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 2px 0px 10px black;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4), inset 2px 0px 10px black;
   position: relative;
   --down-shift: 0px;
   --right-shift: 0px;
@@ -72,7 +66,14 @@ h1 {
 }
 
 .frame img {
-  box-shadow: inset 0 0 10px black;
+  position: relative;
+  z-index: -1;
+}
+
+.frame .inner-shadow {
+  display: inline-block;
+  font-size: 0;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 figure.frame:nth-of-type(2n) {
@@ -84,16 +85,38 @@ figure.frame:nth-of-type(2n) {
 }
 
 #grandma {
-    --down-shift: 110px;
-    --right-shift: 10px;
+  --down-shift: 110px;
+  --right-shift: 10px;
 }
 
 #flowers {
-    --down-shift: 65px;
-    --right-shift: -2px;
+  --down-shift: 65px;
+  --right-shift: -2px;
 }
 
 #family1 {
-    --down-shift: 89px;
-    --right-shift: 13px;
+  --down-shift: 89px;
+  --right-shift: 13px;
+}
+
+#laughing-lady {
+  --down-shift: 22px;
+  --right-shift: -7px;
+}
+
+#freckled-girl {
+  --down-shift: 77px;
+  --right-shift: 12px;
+}
+
+
+
+#pets img {
+  width: 120px;
+  height: 120px;
+}
+
+#pets div:nth-of-type(2) {
+  margin-left: 20px;
+  margin-right: 20px;
 }
