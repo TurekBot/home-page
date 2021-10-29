@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "Goodbye Crewel World";
-    src: url(fonts/goodbye-crewel-world.woff2);
-  }
+  font-family: "Goodbye Crewel World";
+  src: url(fonts/goodbye-crewel-world.woff2);
+}
 
 /* Hides the scrollbar */
 ::-webkit-scrollbar {
@@ -16,12 +16,12 @@
 /* ----------------- */
 
 body {
-  background: #111;
+  background: lemonchiffon;
 }
 
 h1 {
-    font-family: 'Goodbye Crewel World';
-    font-size: 52pt;
+  font-family: "Goodbye Crewel World";
+  font-size: 52pt;
 }
 
 #the-viewport {
@@ -30,7 +30,7 @@ h1 {
   left: 0;
   width: 1024px;
   height: 768px;
-  border: 1px dashed red;
+  border: 1px dashed rgba(100, 0, 0, 0.2);
 }
 
 .diagonal-scroll-wrapper {
@@ -38,21 +38,21 @@ h1 {
   display: block;
   top: 0;
   left: 0;
-  width: 1400px;
+  width: 1240px;
   max-height: 1655px;
-  height: 1000px;
-  overflow-y: auto;
+  height: 1200px;
+  overflow-y: visible;
   overflow-x: hidden;
   transform-origin: left top;
   transform: rotate(-30deg) translate(-384px, 0px);
-  padding-left: 275px;
-  padding-top: 350px;
-  background: rgba(255, 0, 255, 0.4);
+  padding-left: 120px;
+  padding-top: 120px;
 }
 
 .diagonal-scroll-wrapper > * {
   transform-origin: center;
   transform: rotate(30deg);
+  --sqrt-of-three: 1.7320508;
 }
 .diagonal-scroll-wrapper .frame {
   box-sizing: border-box; /* Makes sizing more intuitive by accounting for border. */
@@ -60,28 +60,40 @@ h1 {
   background-color: whitesmoke;
   padding: 20px;
   border: 10px solid black;
-  box-shadow: 10px 10px 40px rgba(0,0,0,0.4);
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
   box-shadow: inset 2px 0px 10px black;
+  position: relative;
+  --down-shift: 0px;
+  --right-shift: 0px;
+  top: calc((var(--down-shift) * var(--sqrt-of-three)) + (var(--right-shift)));
+  right: calc(
+    (var(--down-shift)) + (-1 * var(--right-shift) * var(--sqrt-of-three))
+  );
 }
 
 .frame img {
-    box-shadow: inset 0 0 10px black;
+  box-shadow: inset 0 0 10px black;
 }
 
-frame.four-by-three {
-  aspect-ratio: 4/3;
-  width: 400px;
-  height: 300px;
+figure.frame:nth-of-type(2n) {
+  padding: 40px;
 }
 
-frame.three-by-four {
-  aspect-ratio: 3/4;
-  width: 300px;
-  height: 400px;
+#intro {
+  margin-left: 117px;
 }
 
-frame.two-by-three {
-    aspect-ratio: 2/3;
-    width: 200px;
-    height: 300px;
-  }
+#grandma {
+    --down-shift: 110px;
+    --right-shift: 10px;
+}
+
+#flowers {
+    --down-shift: 65px;
+    --right-shift: -2px;
+}
+
+#family1 {
+    --down-shift: 89px;
+    --right-shift: 13px;
+}
