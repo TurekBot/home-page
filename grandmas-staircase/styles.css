@@ -165,4 +165,7 @@ footer {
   height: 1px;
 }
 /* ----------------- */
+.hidden {
+  display:none;
+}
 
