@@ -10,9 +10,6 @@
 }
 /* ----------------- */
 
-body {
-  background: lemonchiffon;
-}
 
 h1 {
   font-family: "Goodbye Crewel World";
@@ -29,6 +26,9 @@ h1 {
 }
 
 .diagonal-scroll-wrapper {
+  background-color: lemonchiffon;
+  background-image: url("images/wall-4-light.png");
+  background-attachment: local;
   position: fixed;
   display: block;
   top: 0;
@@ -42,6 +42,8 @@ h1 {
   transform: rotate(-30deg) translate(-384px, 0px);
   padding-left: 120px;
   padding-top: 120px;
+  padding-bottom: 500px;
+  padding-right: 400px;
 }
 
 .diagonal-scroll-wrapper > * {
@@ -109,7 +111,15 @@ figure.frame:nth-of-type(2n) {
   --right-shift: 12px;
 }
 
+#orange-eyes {
+  --down-shift: 27px;
+  --right-shift: 0px;
+}
 
+#pets {
+  --down-shift: 4px;
+  --right-shift: 1px;
+}
 
 #pets img {
   width: 120px;
@@ -119,4 +129,53 @@ figure.frame:nth-of-type(2n) {
 #pets div:nth-of-type(2) {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+#bowtie-kid {
+  --down-shift: -42px;
+  --right-shift: 29px;
+}
+
+#grandparents {
+  --down-shift: 46px;
+  --right-shift: 56px;
+}
+
+#grandparents .inner-shadow {
+  display: block;
+}
+
+#grandparents .inner-shadow:first-child {
+  margin-bottom: 20px;
+}
+
+#wet-girl {
+  position: absolute;
+  --down-shift: 870px;
+  --right-shift: 282px;
+}
+
+#curly-red-hair {
+  margin-top: 89px;
+  --down-shift: -22px;
+  --right-shift: 12px;
+}
+
+#marriage {
+  --down-shift: 8px;
+  --right-shift: 41px;
+}
+
+#dad-and-kids {
+  --down-shift: 8px;
+  --right-shift: 0px;
+}
+
+#dog-wash {
+  --down-shift: 0px;
+  --right-shift: 30px;
+}
+
+footer {
+  height: 100vh;
 }
