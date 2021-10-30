@@ -1,0 +1,35 @@
+:root {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* Color palette from https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51 */
+    --charcoal: hsla(197, 37%, 24%, 1);
+    --persian-green: hsla(173, 58%, 39%, 1);
+    --orange-yellow-crayola: hsla(43, 74%, 66%, 1);
+    --sandy-brown: hsla(27, 87%, 67%, 1);
+    --burnt-sienna: hsla(12, 76%, 61%, 1);
+
+    background-color: var(--charcoal);
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    display: flex;
+}
+
+main section {
+    padding: 1vw;
+    width: 33.333333vw;
+    height: 88vh;
+}
+main > section:nth-of-type(1) {
+    background: var(--orange-yellow-crayola);
+}
+main > section:nth-of-type(2) {
+    background: var(--persian-green);
+}
+main > section:nth-of-type(3) {
+    background: var(--burnt-sienna);
+}

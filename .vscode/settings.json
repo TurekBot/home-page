@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "floats, clears & positioning",
-        "Grandma's Staircase"
+        "Grandma's Staircase",
+        "home"
     ]
 }
