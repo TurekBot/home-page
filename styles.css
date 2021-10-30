@@ -19,7 +19,7 @@ main {
     display: flex;
 }
 
-main section {
+main > section {
     padding: 1vw;
     width: 33.333333vw;
     height: 88vh;
